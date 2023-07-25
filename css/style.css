@@ -380,3 +380,38 @@ button:focus {
   height: 2px;
   background-color: var(--color-accent);
 }
+
+/* Inspiration */
+.inspirations {
+  margin: 3rem;
+}
+
+.inspiration {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.inspiration:nth-child(even) .inspiration__img {
+  order: 1;
+}
+
+.inspiration__img {
+  width: 150px;
+  height: 150px;
+  border-radius:100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.24);
+}
+
+.inspiration__bubble {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 10px rgba(88, 98, 102, 0.75);
+}
+
+.inspiration__bubble__name {
+  color: var(--color-accent);
+  font-weight: bold;
+  filter:brightness(80%)
+}
