@@ -236,7 +236,6 @@ button:focus {
 }
 
 .skills__title {
-  color: var(--color-accent);
   margin: 1rem 0;
   font-size: 1.2rem;
 }
@@ -255,8 +254,12 @@ button:focus {
 
 .skills__etc {
   background-color: var(--color-primary);
-  filter: brightness(150%);
+  filter: brightness(120%);
   padding: 1rem;
+}
+
+.skills__tool {
+  color: var(--color-accent);
 }
 
 .bar {
@@ -414,4 +417,143 @@ button:focus {
   color: var(--color-accent);
   font-weight: bold;
   filter:brightness(80%)
+}
+
+/* Arrow up */
+.arrow-up {
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 3px 3px 0px 0px var(--color-accent);
+}
+
+/* Footer */
+#contact {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.contact__link {
+  transition: color 250ms ease;
+}
+
+.contact__link:hover {
+  color: var(--color-accent);
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .header__menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header__nav {
+    width:100%;
+  }
+
+  /* Home */
+  #home {
+    padding-bottom: 3rem;
+  }
+
+  .home__title{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* About */
+  .majors {
+    grid-template-columns: 1fr;
+  }
+
+  .major {
+    max-width: 25rem;
+  }
+
+  .jobs {
+    margin-left: 0;
+  }
+
+  .job {
+    justify-content: center;
+  }
+
+  /* Skills */
+  .skills {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills__title {
+    margin-top: 0;
+  }
+
+  /* Work */
+  .categories {
+    flex-direction: column;
+  }
+
+  .category {
+    width: 100%;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Inspiration */
+  .inspiration {
+    flex-direction: column;
+  }
+
+  .inspiration:nth-child(even) .inspiration__img {
+    order: 0;
+  }
+
+  /* Arrow up */
+  .arrow-up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
 }
