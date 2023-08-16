@@ -444,6 +444,8 @@ button:focus {
   border-radius: 100%;
   text-align: center;
   box-shadow: 3px 3px 0px 0px var(--color-accent);
+  opacity: 0;
+  transition: all 250ms ease-in;
 }
 
 /* Footer */
