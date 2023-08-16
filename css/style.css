@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
   font-family: 'REM', sans-serif;
   color:var(--color-primary);
   margin: 0;
@@ -131,7 +131,6 @@ button:focus {
 
 /* Home */
 #home {
-  background-color: var(--color-primary);
   color:var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
@@ -176,6 +175,10 @@ button:focus {
 }
 
 /* About */
+#about {
+  background-color: var(--color-white);
+}
+
 .majors {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -391,6 +394,10 @@ button:focus {
 }
 
 /* Inspiration */
+#inspiration {
+  background-color: var(--color-white);
+}
+
 .inspirations {
   margin: 3rem;
 }
