@@ -1,6 +1,6 @@
 'use strict';
 
-// project filtering event
+// project category click
 const categories = document.querySelector('.categories');
 const projects = document.querySelectorAll('.project');
 const projectsContainer = document.querySelector('.projects');
