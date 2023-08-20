@@ -12,8 +12,8 @@
     <!-- OG -->
     <meta property="og:title" content="Jane's Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://limyzi.github.io/portfolio/" />
-    <meta property="og:image" content="https://limyzi.github.io/portfolio/og.webp" />
+    <meta property="og:url" content="https://limyzi.github.io/" />
+    <meta property="og:image" content="https://limyzi.github.io/images/og.webp" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,12 +26,15 @@
       src="https://kit.fontawesome.com/c4d1436716.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.0.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- JS -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -65,7 +68,7 @@
           src="images/profile.png"
           alt="Jane's profile"
         />
-        <h2 class="home__title">
+        <h2 class="home__title" aria-label="Hello I'm Yeonji Jane Lim">
           Hello<br />
           I&#39;m <strong class="home__title--strong">Jane</strong>!
         </h2>

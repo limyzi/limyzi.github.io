@@ -6,6 +6,10 @@
   --color-text: var(--color-white);
   --color-accent: var(--color-pink);
   --color-accent-variant:var(--color-light);
+  
+  /* Background */
+  --home-bg-gradient: linear-gradient(180deg, rgb(65,90,119) 0%, rgba(2,48,71,1) 100%);
+  --contact-bg-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%23F1FAEE'/%3E%3Cstop offset='1' stop-color='%23FFFDFD'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFA5AB'/%3E%3Cstop offset='1' stop-color='%23FFFDFD'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   /* Colors */
   --color-white: #fffdfd;
@@ -13,9 +17,15 @@
   --color-light: #f1faee;
   --color-gray: #415a77;
   --color-pink: #ffa5ab;
+  
 
   /* Size */
-  --size-max-width : 1200px;
+  --size-max-width : 2160px;
+
+  /* Divider */
+  --divider-wave-opacity: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" ></path> <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path> <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" ></path> </svg>');
+  --divider-triangle: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"></path> </svg>');
+  --divider-book: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <rect x="1200" height="3.6"></rect> <rect height="3.6"></rect> <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"></path> </svg>');
 }
 
 * {
@@ -146,6 +156,8 @@ button:focus {
 /* Home */
 #home {
   color:var(--color-text);
+  background: rgb(65,90,119);
+  background: var(--home-bg-gradient);
   padding: 5rem 1rem;
   padding-top: 7rem;
   text-align: center;
@@ -190,6 +202,7 @@ button:focus {
 
 /* About */
 #about {
+  position: relative;
   background-color: var(--color-white);
 }
 
@@ -243,8 +256,25 @@ button:focus {
   text-indent: 5%;
 }
 
+#about::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  width: calc(100% + 1.3px);
+  height: 52px;
+  transform: rotateY(180deg);
+  background-color: var(--color-primary);
+  mask: var(--divider-wave-opacity);
+  -webkit-mask: var(--divider-wave-opacity);
+}
+
 /* Skills */
 #skills {
+  position: relative;
   background: var(--color-primary-variant);
   color: var(--color-text);
 }
@@ -306,6 +336,20 @@ button:focus {
 .bar__value {
   height: 3px;
   background-color: var(--color-accent);
+}
+
+#skills::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  line-height: 0;
+  width: calc(100% + 1.3px);
+  height: 40px;
+  background-color: var(--color-primary);
+  mask: var(--divider-triangle);
+  -webkit-mask: var(--divider-triangle);
 }
 
 /* Work */
@@ -470,8 +514,11 @@ button:focus {
 
 /* Footer */
 #contact {
+  position: relative;
   background-color: var(--color-primary);
   color: var(--color-text);
+  background-image: var(--contact-bg-svg);
+  background-size: cover;
 }
 
 .contact__links {
@@ -492,6 +539,20 @@ button:focus {
 
 .copyright {
   font-size: 0.8rem;
+}
+
+#contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 1.3px);
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+  background-color: var(--color-white);
+  mask: var(--divider-book);
+  -webkit-mask: var(--divider-book);
 }
 
 @media screen and (max-width: 768px) {
