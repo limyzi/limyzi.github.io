@@ -256,6 +256,10 @@ button:focus {
   text-indent: 5%;
 }
 
+.job__link {
+  color: var(--color-primary);
+}
+
 #about::after {
   content: '';
   position: absolute;
@@ -510,6 +514,7 @@ button:focus {
   box-shadow: 3px 3px 0px 0px var(--color-accent);
   opacity: 0;
   transition: all 250ms ease-in;
+  z-index: 1;
 }
 
 /* Footer */

@@ -23,7 +23,7 @@ function filterProjects(filter) {
   //project filtering
   projectsContainer.classList.add('anim-out');
   projects.forEach((project) => {
-    if(filter === 'all' || filter === project.dataset.type) {
+    if(filter === 'all' || filter === project.dataset.type || project.dataset.type === 'all') {
       project.style.display = 'block';
     }else {
       project.style.display = 'none';
