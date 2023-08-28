@@ -560,6 +560,56 @@ button:focus {
   -webkit-mask: var(--divider-book);
 }
 
+/* Project Details */
+
+#project {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.69);
+  -webkit-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.69);
+  -moz-box-shadow: 0px 0px 17px -4px rgba(0,0,0,0.69);
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+.project__information {
+  margin: 2rem;
+}
+
+.project__part__title {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.project__part__desc {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.project__part__desc li{
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.69);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.69);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.69);
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.project__part__desc li.active {
+  opacity:1;
+}
+
 @media screen and (max-width: 768px) {
   .section {
     padding: 4rem 2rem;

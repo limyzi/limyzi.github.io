@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <title>Jane&#39;s Portfolio</title>
+  <meta name="description" content="Portfolio for junior developer Jane" />
+  <meta name="author" content="Jane" />
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <!-- OG -->
+  <meta property="og:title" content="Jane's Portfolio" />
+  <meta property="og:type" content="website" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=REM&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/c4d1436716.js"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- JS -->
+    <script type="module" src="../src/project_detail.js" defer></script>
+</head>
+<body>
+  <header class="header--dark">
+    <div class="header__logo">
+      <h1 class="header__logo__title">
+        <a href="../index.html#work">
+        <i class="fa-solid fa-backward"></i>
+        Jane's portfolio
+      </a>
+      </h1>
+    </div>
+  </header>
+  <section id="project">
+    <section id="image-carousel" class="splide" aria-label="Project Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="https://placehold.co/400x200" alt="project">
+          </li>
+          <li class="splide__slide">
+            <img src="https://placehold.co/400x200" alt="project">
+          </li>
+          <li class="splide__slide">
+            <img src="https://placehold.co/400x200" alt="project">
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="project__information">
+      <h2 class="project__title">S-PACE</h2>
+      <p class="project__description">
+        Advertising website for Samjin Pharmaceutical Company showcasing their pill products.
+        <p class="project__skills">
+             Javascript / Java / JQuery / thymeleaf / Spring framework / MySQL / SVN
+        </p>
+        <h3 class="project__part__title">
+          What I did in this project
+        </h3>
+        <ul class="project__part__desc">
+          <li>Developed individual pages utilizing the MVC pattern for structured and organized code.</li>
+          <li>Designed and managed the database using MySQL to ensure efficient data storage and retrieval.</li>
+          <li>Created CMS pages to furnish medical product information and facilitate online/offline event registration management.</li>
+          <li>Implemented a service enabling users to check both online and offline events, categorized by month.</li>
+          <li><a href="https://s-pace.co.kr/" target="_blank"><i class="fa-solid fa-house"></i> Homepage</a></li>
+        </ul>
+      </p>
+    </section>
+  </section><footer id="contact" class="section">
+    <div class="max-container">
+      <h2 class="title">Contact Me</h2>
+      <p>930716a@gmail.com</p>
+      <ul class="contact__links">
+        <li>
+          <a class="contact__link"
+            href="https://github.com/limyzi"
+            title="my github"
+            target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a class="contact__link" href="#" title="my linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright">ⓒlimyzi - All rights reserved</p>
+    </div>
+  </footer>
+  <script>
+    new Splide( '#image-carousel' ).mount();
+  </script>
+</body>
+</html>
