@@ -671,9 +671,9 @@ button:focus {
     grid-template-columns: 1fr;
   }
 
-  .major {
+  /* .major {
     max-width: 25rem;
-  }
+  } */
 
   .jobs {
     margin-left: 0;
